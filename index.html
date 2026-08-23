@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff6b45" />
+    <meta name="description" content="Поймай мультяшную таксу за 30 секунд и поставь новый рекорд." />
+    <meta property="og:title" content="Поймай таксу!" />
+    <meta property="og:description" content="30 секунд на новый рекорд" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Поймай таксу!" />
+    <meta name="twitter:description" content="30 секунд на новый рекорд" />
+    <title>Поймай таксу</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="game-shell" aria-labelledby="game-title">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">●</span>
+          <div>
+            <p class="eyebrow">Игра на скорость</p>
+            <h1 id="game-title">Поймай таксу!</h1>
+          </div>
+        </div>
+
+        <div class="scoreboard" aria-label="Результаты игры">
+          <div class="stat stat-time">
+            <span class="stat-label">Время</span>
+            <strong id="time-value">30</strong>
+            <span class="stat-unit">сек</span>
+          </div>
+          <div class="stat">
+            <span class="stat-label">Счёт</span>
+            <strong id="score-value">0</strong>
+          </div>
+          <div class="stat stat-best">
+            <span class="stat-label">Рекорд</span>
+            <strong id="best-value">0</strong>
+          </div>
+        </div>
+      </header>
+
+      <section class="game-layout">
+        <aside class="control-card">
+          <div class="round-badge">30 секунд</div>
+          <h2>Успеешь её поймать?</h2>
+          <p>Нажимай на таксу — каждый клик приносит одно очко и отправляет её в новое место.</p>
+
+          <button class="primary-button" id="start-button" type="button">
+            <span>Начать игру</span>
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <div class="key-hint">
+            <kbd>Esc</kbd>
+            <span>Пауза во время игры</span>
+          </div>
+        </aside>
+
+        <div class="playfield" id="playfield" aria-label="Игровое поле">
+          <div class="sun" aria-hidden="true"></div>
+          <div class="cloud cloud-one" aria-hidden="true"></div>
+          <div class="cloud cloud-two" aria-hidden="true"></div>
+          <div class="hill hill-back" aria-hidden="true"></div>
+          <div class="hill hill-front" aria-hidden="true"></div>
+          <div class="flower flower-one" aria-hidden="true">✿</div>
+          <div class="flower flower-two" aria-hidden="true">✿</div>
+
+          <button class="dachshund-target is-preview" id="dachshund" type="button" aria-label="Поймать таксу">
+            <img src="./assets/dachshund.png" alt="Весёлая мультяшная такса" draggable="false" />
+            <span class="catch-label" aria-hidden="true">Лови!</span>
+          </button>
+
+          <div class="game-overlay is-visible" id="game-overlay" role="status" aria-live="polite">
+            <p class="overlay-kicker">Готовы?</p>
+            <h2>30 секунд.<br />Одна быстрая такса.</h2>
+            <p>Нажмите «Начать игру», и охота за рекордом начнётся.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./game.js"></script>
+  </body>
+</html>
+
