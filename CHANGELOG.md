@@ -2,6 +2,10 @@
 
 ## В разработке
 
+### Изменено
+
+- GitHub Actions обновлены до актуальных стабильных версий: `checkout 7.0.1`, `setup-node 7.0.0`, `pr-preview-action 1.8.1` и `github-pages-deploy-action 4.9.0`.
+
 ### Добавлено
 
 - README дополнен правилами игры и ссылкой на проверочное превью Pull Request.
