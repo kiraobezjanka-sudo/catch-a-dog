@@ -1,0 +1,18 @@
+{
+  "name": "catch-dachshund",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "dev": "node dev-server.mjs",
+    "build": "node build.mjs",
+    "start": "node dev-server.mjs",
+    "test": "node --test tests/game-core.test.mjs"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "type": "module"
+}
+
